@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-##membersテーブル
+## membersテーブル
 
 |column|Type|Options|
 |-----|----|-------|
@@ -37,7 +37,7 @@ Things you may want to cover:
 - has_many: messages
 - has_many: images
 
-##usersテーブル
+## usersテーブル
 
 |column|Type|Options|
 |-----|----|-------|
@@ -50,7 +50,7 @@ Things you may want to cover:
 - has_many: members
 - has_many: groups, through: menbers
 
-##groupsテーブル
+## groupsテーブル
 
 |column|Type|Options|
 |-----|----|-------|
@@ -64,7 +64,7 @@ Things you may want to cover:
 
 
 
-##messageテーブル
+## messageテーブル
 
 |column|Type|Options|
 |-----|----|-------|
@@ -74,7 +74,7 @@ Things you may want to cover:
 ### Association
 - belongs_to: member
 
-##imageテーブル
+## imageテーブル
 
 |column|Type|Options|
 |-----|----|-------|
