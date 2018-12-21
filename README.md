@@ -24,60 +24,62 @@ Things you may want to cover:
 * ...
 
 ##membersテーブル
+
 |column|Type|Options|
 |-----|----|-------|
 |user_id|ingeger|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
+
 - belongs_to :group
 - belongs_to :user
 - has_many: messages
 - has_many: images
 
 ##usersテーブル
+
 |column|Type|Options|
 |-----|----|-------|
 |user_name|string|null:false|
 |email|string|null: false|
 |password|string|null: false, minimum:8|
 
-
 ### Association
+
 - has_many: members
 - has_many: groups, through: menbers
 
 ##groupsテーブル
+
 |column|Type|Options|
 |-----|----|-------|
 |group_name|string|null:false|
 
 
 ### Association
+
 - has_many:menbers
 - has_many:users, through: menbers
 
 
 
 ##messageテーブル
+
 |column|Type|Options|
 |-----|----|-------|
 |mesage|string|null:false|
 |member_id|integer|null: false, foreign_key: true|
 
-
 ### Association
 - belongs_to: member
 
 ##imageテーブル
+
 |column|Type|Options|
 |-----|----|-------|
 |image|string|null:false|
 |member_id|integer|null: false, foreign_key: true|
 
-
 ### Association
 - belongs_to: member
-
-
-
