@@ -64,7 +64,7 @@ Things you may want to cover:
 
 
 
-## messageテーブル
+## messagesテーブル
 
 |column|Type|Options|
 |-----|----|-------|
@@ -74,7 +74,7 @@ Things you may want to cover:
 ### Association
 - belongs_to: member
 
-## imageテーブル
+## imagesテーブル
 
 |column|Type|Options|
 |-----|----|-------|
