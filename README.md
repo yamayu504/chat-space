@@ -24,7 +24,7 @@ Things you may want to cover:
 * ...
 
 ##membersテーブル
-|colum|Type|Options|
+|column|Type|Options|
 |-----|----|-------|
 |user_id|ingeger|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
@@ -36,7 +36,7 @@ Things you may want to cover:
 - has_many: images
 
 ##usersテーブル
-|colum|Type|Options|
+|column|Type|Options|
 |-----|----|-------|
 |user_name|string|null:false|
 |email|string|null: false|
@@ -48,7 +48,7 @@ Things you may want to cover:
 - has_many: groups, through: menbers
 
 ##groupsテーブル
-|colum|Type|Options|
+|column|Type|Options|
 |-----|----|-------|
 |group_name|string|null:false|
 
@@ -60,7 +60,7 @@ Things you may want to cover:
 
 
 ##messageテーブル
-|colum|Type|Options|
+|column|Type|Options|
 |-----|----|-------|
 |mesage|string|null:false|
 |member_id|integer|null: false, foreign_key: true|
@@ -70,7 +70,7 @@ Things you may want to cover:
 - belongs_to: member
 
 ##imageテーブル
-|colum|Type|Options|
+|column|Type|Options|
 |-----|----|-------|
 |image|string|null:false|
 |member_id|integer|null: false, foreign_key: true|
