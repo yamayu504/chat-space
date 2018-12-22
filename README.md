@@ -35,7 +35,6 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
-
 ## usersテーブル
 
 |column|Type|Options|
@@ -56,14 +55,11 @@ Things you may want to cover:
 |-----|----|-------|
 |group_name|string|null:false|
 
-
 ### Association
 
 - has_many:menbers
 - has_many:users, through: menbers
 - has_many: messages, through: menbers
-
-
 
 ## messagesテーブル
 
@@ -77,5 +73,3 @@ Things you may want to cover:
 ### Association
 - belongs_to: users
 - belongs_to: messages
-
-
