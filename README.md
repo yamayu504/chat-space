@@ -1,34 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 ## membersテーブル
 
 |column|Type|Options|
 |-----|----|-------|
-|user_id|ingeger|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 
@@ -47,7 +24,7 @@ Things you may want to cover:
 
 - has_many: members
 - has_many: groups, through: menbers
-- has_many: messages, through: menbers
+- has_many: messages
 
 ## groupsテーブル
 
@@ -57,9 +34,9 @@ Things you may want to cover:
 
 ### Association
 
-- has_many:menbers
-- has_many:users, through: menbers
-- has_many: messages, through: menbers
+- has_many: menbers
+- has_many: users, through: menbers
+- has_many: messages
 
 ## messagesテーブル
 
@@ -67,9 +44,9 @@ Things you may want to cover:
 |-----|----|-------|
 |mesage|string|null:false|
 |image|string||
-|user_id|ingeger|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to: users
-- belongs_to: messages
+- belongs_to: user
+- belongs_to: message
