@@ -34,8 +34,7 @@ Things you may want to cover:
 
 - belongs_to :group
 - belongs_to :user
-- has_many: messages
-- has_many: images
+
 
 ## usersテーブル
 
@@ -49,6 +48,7 @@ Things you may want to cover:
 
 - has_many: members
 - has_many: groups, through: menbers
+- has_many: messages, through: menbers
 
 ## groupsテーブル
 
@@ -61,6 +61,7 @@ Things you may want to cover:
 
 - has_many:menbers
 - has_many:users, through: menbers
+- has_many: messages, through: menbers
 
 
 
@@ -69,17 +70,12 @@ Things you may want to cover:
 |column|Type|Options|
 |-----|----|-------|
 |mesage|string|null:false|
-|member_id|integer|null: false, foreign_key: true|
+|image|string||
+|user_id|ingeger|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to: member
+- belongs_to: users
+- belongs_to: messages
 
-## imagesテーブル
 
-|column|Type|Options|
-|-----|----|-------|
-|image|string|null:false|
-|member_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to: member
