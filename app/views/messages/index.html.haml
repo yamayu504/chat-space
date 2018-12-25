@@ -1,0 +1,40 @@
+.header
+  %p 投稿されましたがなーーーーーーーーーーー
+.container
+  .container__sidebar
+    .container__sidebar__header
+      %h3 samplesample
+      =link_to "#" do
+        %span.post__image
+          %i.fa.fa-cog
+      =link_to "#" do
+        %span.settings
+          %i.fa.fa-edit
+    .container__sidebar__contents
+      = render "sidebar__contents__group"
+      = render "sidebar__contents__group"
+  .container__main
+    .container__main__header
+      .container__main__header__left
+        %h2 samplesample
+        %p  20XX/12/24 11:59:59
+      .container__main__header__right
+        =link_to "Edit", "#", :class => "container__main__header__right__edit"
+    .container__main__contents
+      = render "main__contents__message"
+      = render "main__contents__message"
+      = render "main__contents__message"
+      = render "main__contents__message"
+      = render "main__contents__message"
+      = render "main__contents__message"
+      = render "main__contents__message"
+      = render "main__contents__message"
+    .container__main__footer
+      .container__main__footer__left
+        %input{:type => "text", :class => "container__main__footer__left__send", :placeholder => "type a message"}
+        %label.upload-label{for: "upload-icon"}
+          %span.picture
+            %i.fa.fa-picture-o
+      .container__main__footer__right
+        %input{:type => "submit", :value => "send", :class => "container__main__footer__right__submit"}
+
