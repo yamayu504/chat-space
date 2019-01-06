@@ -24,7 +24,8 @@
       letter-spacing: 3px;
       font-size: 40px;
       font-weight: 200;
-
+      color: #38aef0;
+      font-family: Roboto,'Droid Sans';
       &:after {
         content: '';
         display: block;
@@ -33,11 +34,27 @@
         border-bottom: 1px solid #38aef0;
       }
     }
-
+    h2#edit--border{
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+      font-size: 40px;
+      font-weight: 200;
+      color: #38aef0;
+      font-family: Roboto,'Droid Sans';
+        &:after {
+        content: '';
+        display: block;
+        width: 300px;
+        margin-top: 5px;
+        border-bottom: 1px solid #38aef0;
+       }
+      }
     h5 {
       margin-bottom: 20px;
       font-size: 14px;
       font-weight: 200;
+      color: #38aef0;
+      font-family: Roboto,'Droid Sans';
     }
 
     .btn {
