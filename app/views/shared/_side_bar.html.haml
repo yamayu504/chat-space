@@ -1,0 +1,19 @@
+.container__sidebar
+  .container__sidebar__header
+    %h3
+      = current_user.user_name
+    = link_to edit_user_path( current_user ) do
+      %span.post__image
+        %i.fa.fa-cog
+    =link_to new_group_path( current_user ) do
+      %span.settings
+        %i.fa.fa-edit
+  .container__sidebar__contents
+    - current_user.groups.each do |group|
+      .container__sidebar__contents__group
+        =link_to "",group_messages_path( group )
+        .container__sidebar__contents__group__title
+          %h4
+            = group.group_name
+        .container__sidebar__contents__group__message
+          %p まだ何も話してませんよーーー

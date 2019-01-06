@@ -1,25 +1,13 @@
-.header
-  %p 投稿されましたがなーーーーーーーーーーー
 .container
-  .container__sidebar
-    .container__sidebar__header
-      %h3 samplesample
-      =link_to "#" do
-        %span.post__image
-          %i.fa.fa-cog
-      =link_to "#" do
-        %span.settings
-          %i.fa.fa-edit
-    .container__sidebar__contents
-      = render "sidebar__contents__group"
-      = render "sidebar__contents__group"
+  =render 'shared/side_bar'
   .container__main
     .container__main__header
       .container__main__header__left
-        %h2 samplesample
+        %h2
+          =current_user.user_name
         %p  20XX/12/24 11:59:59
       .container__main__header__right
-        =link_to "Edit", "#", :class => "container__main__header__right__edit"
+        =link_to "Edit", "/groups/#{:id}/edit", :class => "container__main__header__right__edit"
     .container__main__contents
       = render "main__contents__message"
       = render "main__contents__message"

@@ -16,15 +16,7 @@ h4{
     font-size: 15px;
 }
 
-.header{
-  height:30px;
-  width:100vw;
-  background-color:#38AEF0;
-  p{
-   font-size:16px;
-   text-align: center;
-  }
-}
+// flash部分は、フラッシュにて明記
 .container{
   @include clearfix();
   background-color:white;
@@ -32,7 +24,7 @@ h4{
   width: 100vw;
   margin:0;
   &__sidebar{
-    background-color: #2f3e51;
+    background-color: rgba(47, 62, 81, 1.0);
     height:100vh;
     width:300px;
     float:left;
@@ -68,9 +60,21 @@ h4{
       width:300px;
       margin:20px, auto, 0;
         &__group{
-          padding:0 20px;
+          padding:20px 20px 40px;
           height:auto;
-          margin:20px 0 40px;
+          position:relative;
+          z-index: 1;
+          background-color: rgba(47, 62, 81, 1.0);
+          a{
+            display: block;
+            position:absolute;
+            top:0;
+            left  : 0;
+            width : 100%;
+            height: 100%;
+            text-indent:-999px;
+            z-index: 2;
+          }
           &__title{
           font-size:15px;
           display: block;
@@ -81,6 +85,9 @@ h4{
           display: block;
           }
         }
+      &__group:hover {
+        background-color: rgb(75, 87, 104);
+      }
     }
   }
   &__main{

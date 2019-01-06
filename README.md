@@ -16,7 +16,7 @@
 
 |column|Type|Options|
 |-----|----|-------|
-|user_name|string|null:false|
+|user_name|string|null:false,unique: true|
 |email|string|null: false|
 |password|string|null: false, minimum:8|
 
