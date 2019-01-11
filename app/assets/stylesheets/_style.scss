@@ -197,10 +197,15 @@ h4{
           top:25px;
           right:25px;
           font-size:30px;
+          #uploader-icon{
+            display:none;
+            width:0;
+            height:0;
+          }
         }
      }
      &__right{
-       float:left;
+       float:right;
        width:100px;
        text-align: left;
        padding-right:40px;
