@@ -13,7 +13,7 @@
       - @messages.each do |message|
         = render "main__contents__message", message: message
     .container__main__footer
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message] , html: {id: 'new_message'} do |f|
         .container__main__footer__left
           = f.text_field :message, class: "container__main__footer__left__send", placeholder: "type a message"
           %label.upload-label{ for: "uploader-icon" }
