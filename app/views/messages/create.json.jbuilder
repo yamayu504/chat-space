@@ -1,4 +1,3 @@
-
   json.id         @message.id
   json.message    @message.message
   json.image      @message.image.url
