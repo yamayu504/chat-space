@@ -8,16 +8,18 @@ class MessagesController < ApplicationController
   end
   def create
       @message = @group.messages.new(message_params)
-        #validationがあるのでsaveしたタイミングで、nilは除外してくれる。
-        if @message.save
-          redirect_to group_messages_path( @group ) , notice: "投稿されましたがなー"
-        else
-
-          @messages = @group.messages.includes( :user )
-          flash.now[:alert] = "メッセージを入力してください。"
-          # renderは、コントローラのindexに行くのではなくviewに行く。
-          render :index
+        #validationがあるのでsaveしたタイミングで、nilは除外してくれる
+      if @message.save
+        respond_to do |format|
+          format.html { redirect_to group_messages_path( @group ) , notice: "投稿されました" }
+          format.json
         end
+      else
+        @messages = @group.messages.includes( :user )
+        flash.now[:alert] = "メッセージを入力してください。"
+        # renderは、コントローラのindexに行くのではなくviewに行く。
+        render :index
+      end
   end
   private
   def message_params
@@ -28,4 +30,3 @@ class MessagesController < ApplicationController
   end
 
 end
-

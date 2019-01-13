@@ -136,7 +136,7 @@ h4{
       // scrollするcontentsは、mainコンテンツの分から画面全体を引いた高さ
       height:calc(100vh - 185px);
       width:100%;
-      overflow-y: auto;
+      overflow-y: scroll/auto;
       overflow-x: hidden;
       &__message{
         &__dammyheader{
