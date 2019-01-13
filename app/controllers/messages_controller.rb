@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
         @messages = @group.messages.includes( :user )
         flash.now[:alert] = "メッセージを入力してください。"
         # renderは、コントローラのindexに行くのではなくviewに行く。
-        render :action => :index
+        render :index
       end
   end
   private
