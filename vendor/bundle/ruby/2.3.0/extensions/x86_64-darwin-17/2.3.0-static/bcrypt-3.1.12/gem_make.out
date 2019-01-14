@@ -1,5 +1,5 @@
 current directory: /Users/yamayu/projects2/chat-space/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.12/ext/mri
-/Users/yamayu/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20190106-2874-1veykrm.rb extconf.rb
+/Users/yamayu/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20190113-26501-1eb4b8e.rb extconf.rb
 creating Makefile
 
 current directory: /Users/yamayu/projects2/chat-space/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.12/ext/mri
@@ -16,4 +16,4 @@ linking shared-object bcrypt_ext.bundle
 
 current directory: /Users/yamayu/projects2/chat-space/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.12/ext/mri
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20190106-2874-1xkgh0q
+/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20190113-26501-1h1cc1s

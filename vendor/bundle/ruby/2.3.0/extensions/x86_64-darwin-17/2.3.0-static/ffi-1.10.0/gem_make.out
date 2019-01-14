@@ -1,5 +1,5 @@
 current directory: /Users/yamayu/projects2/chat-space/vendor/bundle/ruby/2.3.0/gems/ffi-1.10.0/ext/ffi_c
-/Users/yamayu/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20190111-1291-17j3p2a.rb extconf.rb
+/Users/yamayu/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20190113-26501-1xun5hs.rb extconf.rb
 checking for ffi.h... no
 checking for ffi.h in /usr/local/include,/usr/include/ffi... yes
 checking for ffi_call() in -lffi... yes
@@ -140,4 +140,4 @@ compiling ClosurePool.c
 compiling StructByValue.c
 linking shared-object ffi_c.bundle
 ld: warning: could not create compact unwind for _ffi_call_unix64: does not use RBP or RSP based frame
-/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20190111-1291-zzfy6g
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20190113-26501-fpcwvt
