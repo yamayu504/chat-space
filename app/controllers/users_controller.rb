@@ -1,11 +1,7 @@
 class UsersController < ApplicationController
   def index
-    search_users     = User.where('user_name LIKE(?)', "%#{params[:keyword]}%")
     # ここで本来ならばグループメンバーを弾くべきだが、editとnewが共存する_form.html.hamlでの実現方法がわからない。。。
-    search_users_ids = search_users.ids.select do |x|
-      x != current_user.id
-    end
-    @users = User.where(id: search_users_ids).limit(10)
+    @users     = User.where('user_name LIKE(?)', "%#{params[:keyword]}%").where.not(id: current_user.id)
     respond_to do |format|
       format.html
       format.json
