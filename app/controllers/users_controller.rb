@@ -1,4 +1,13 @@
 class UsersController < ApplicationController
+  def index
+    # ここで本来ならばグループメンバーを弾くべきだが、editとnewが共存する_form.html.hamlでの実現方法がわからない。。。
+    @users     = User.where('user_name LIKE(?)', "%#{params[:keyword]}%").where.not(id: current_user.id)
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   def edit
   end
 
