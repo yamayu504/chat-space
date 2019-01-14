@@ -39,14 +39,13 @@ $(document).on('turbolinks:load', function() {
           // 一致したものを表示する分岐
         $('#user-search-result').children().remove();
         data.forEach( function( userData ) {
-           console.log( userData.id )
           var htmlSearch = buildHTML(userData)
           $('#user-search-result').append(htmlSearch);
         });
         }
       })
       // 通信処理ができなかった時の処理
-      .fail(function(XMLHttpRequest, textStatus, errorThrown){
+      .fail(function(){
         alert('ユーザー検索に失敗しました');
       })
     }
