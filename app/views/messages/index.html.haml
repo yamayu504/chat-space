@@ -6,7 +6,7 @@
         %h2
           = @group.group_name
         %p
-          = @group.created_at
+          ="Menber:#{@users.join(", ")}"
       .container__main__header__right
         =link_to "Edit", "/groups/#{params[:group_id]}/edit", :class => "container__main__header__right__edit"
     .container__main__contents

@@ -29,9 +29,8 @@ $(document).on('turbolinks:load', function() {
         data:        {keyword: input},
         dataType:   'json',
       })
+      // 通信処理ができた場合の処理
       .done(function(data){
-        // 通信処理ができた場合の処理
-
         if($.isEmptyObject(data)){
         // 一致したものがない場合の分岐
         $('#user-search-result').children().remove();
