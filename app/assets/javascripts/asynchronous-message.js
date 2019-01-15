@@ -14,8 +14,10 @@ $(document).on('turbolinks:load', function() {
         <div class="container__main__contents__message__text">
           <p>
             ${ $.isEmptyObject(message.message) ? "" : message.message }
+          </p>
+        </div>
+        <div class="container__main__contents__message__image">
             <img src= "${ $.isEmptyObject(message.image) ? "" : message.image}"/>
-         </p>
         </div>
        </div>`
       return html;

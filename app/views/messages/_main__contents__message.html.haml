@@ -1,13 +1,13 @@
 .container__main__contents__message
   .container__main__contents__message__dammyheader
   .container__main__contents__message__header
-
-    %h2 
+    %h2
       = message.user.user_name
-    %span 
-      =message.created_at
+    %span
+      = message.created_at
   .container__main__contents__message__text
-    %p 
-      =message.message
-      =image_tag message.image.to_s
+    %p
+      = message.message
+  .container__main__contents__message__image
+    = image_tag message.image.to_s
 
