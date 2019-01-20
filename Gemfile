@@ -50,6 +50,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :production do
+  gem 'unicorn'
+end
+
 gem 'pry-rails'
 gem 'compass-rails','3.1.0'
 gem 'sprockets', '3.7.2'
