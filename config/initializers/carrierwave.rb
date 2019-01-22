@@ -4,7 +4,7 @@ require 'carrierwave/storage/fog'
 
 CarrierWave.configure do |config|
   config.storage         = :fog
-  config.fog_providor    = 'fog/aws'
+  config.fog_provider    = 'fog/aws'
   config.fog_credentials = {
     providoer: 'AWS',
     aws_access_key_id: Rails.application.secrets.aws_access_key_id,
