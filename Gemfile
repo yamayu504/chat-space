@@ -63,6 +63,7 @@ group :production do
 end
 
 gem 'pry-rails'
+gem 'rb-readline'
 gem 'compass-rails','3.1.0'
 gem 'sprockets', '3.7.2'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
