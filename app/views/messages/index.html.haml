@@ -10,8 +10,7 @@
       .container__main__header__right
         =link_to "Edit", "/groups/#{params[:group_id]}/edit", :class => "container__main__header__right__edit"
     .container__main__contents
-      - @messages.each do |message|
-        = render "main__contents__message", message: message
+      = render @messages
     .container__main__footer
       = form_for [@group, @message] , html: {id: 'new_message'} do |f|
         .container__main__footer__left
